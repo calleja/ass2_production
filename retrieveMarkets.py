@@ -3,14 +3,13 @@
 """
 Will need to retrieve universe of available currencies from bittrex and place into a pd df
 """
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import pyplot as plt
 import pandas as pd
 import requests
 import datetime
-import matplotlib
 import io
-import matplotlib
-matplotlib.use('TkAgg')
-from matplotlib import pyplot as plt
 import numpy as np
 
 class RetrieveMarkets():
@@ -114,6 +113,7 @@ class RetrieveMarkets():
         plt.plot(df['time'],df['ma_20'],color='cyan',linestyle='-')
 #plt.title(str(self.market)+' pair') 
         plt.title('100 day and 20 day MA: '+str(self.base_currency)+'-'+ticker+' pair')
+        plt.switch_backend('agg')
         plt.show(block=True)
         img=io.BytesIO()
         plt.savefig(img,format='png')
