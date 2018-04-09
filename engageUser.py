@@ -4,8 +4,7 @@
 Client dialogue
 """
 import sys
-sys.path.append('/home/tio/Documents/CUNY/advancedProgramming/ass2/adv_programming_ass2')
-sys.path.append('/home/lechuza/Documents/CUNY/data_607/assignment2/gitCode')
+sys.path.append('/usr/src/app/PROJECT_FOLDER')
 import tradeClass as trade
 import ass1_acountsClass as accts
 import datetime as datetime

@@ -6,7 +6,9 @@ Will need to retrieve universe of available currencies from bittrex and place in
 import pandas as pd
 import requests
 import datetime
-import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import pyplot as plt
 import numpy as np
 
 class RetrieveMarkets():

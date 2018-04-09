@@ -16,7 +16,6 @@ P/L:
 import sys
 import pandas as pd
 sys.path.append('/usr/src/app/PROJECT_FOLDER')
-sys.path.append('/home/tio/Documents/CUNY/advancedProgramming/ass2/adv_programming_ass2')
 import tradeClass as trade
 import mongoDB_interface as mongo
 
