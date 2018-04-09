@@ -8,7 +8,8 @@ import requests
 import datetime
 import matplotlib
 import io
-matplotlib.use('Agg')
+import matplotlib
+matplotlib.use('TkAgg')
 from matplotlib import pyplot as plt
 import numpy as np
 
