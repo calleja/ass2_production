@@ -7,6 +7,7 @@ import pandas as pd
 import requests
 import datetime
 import matplotlib
+import io
 matplotlib.use('Agg')
 from matplotlib import pyplot as plt
 import numpy as np
@@ -113,5 +114,8 @@ class RetrieveMarkets():
 #plt.title(str(self.market)+' pair') 
         plt.title('100 day and 20 day MA: '+str(self.base_currency)+'-'+ticker+' pair')
         plt.show(block=True)
+        img=io.BytesIO()
+        plt.savefig(img,format='png')
+        img.seek(0)
         plt.close()
         return()
